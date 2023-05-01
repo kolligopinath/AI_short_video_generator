@@ -18,4 +18,4 @@ How it works?
     Video generation: Now the Voice over audio & images are pieced together to generate video.
 
 
-##A sample output file is attached
+#A sample output file is attached
