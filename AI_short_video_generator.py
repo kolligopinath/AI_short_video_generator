@@ -8,9 +8,10 @@ from moviepy.editor import VideoFileClip
 import time
 
 # Declaration of variables like API keys and others
-api_key = "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"
+# Replace the API keys with your account API keys
+api_key = "chatgpt_api_key"
 ADVISOR_VOICE_ID = "EXAVITQu4vr4xnSDxMaL"
-ELEVEN_LABS_API_KEY = "c3b320ee4f8f68e49ddef05b1ab28aed"
+ELEVEN_LABS_API_KEY = "Eleven_labs_api_key"
 
 # Set up the OpenAI API client
 openai.api_key = api_key
