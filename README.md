@@ -1,6 +1,8 @@
 # AI_short_video_generator
 Automated short video generated using Artificial intelligence tools.
+
 This can be used to Generate instagram reels, Tiktok videos, Youtube shorts in wide range of topics like Travel, lifestyle, fashion, Short stories for kids, etc,.
+
 This can generate lengthy videos as well in those areas.
 
 How it works?
