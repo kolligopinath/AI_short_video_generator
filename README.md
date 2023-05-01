@@ -16,3 +16,6 @@ How it works?
     Image Generation: It generates relevant images for each line of the script, based on the topic using DALLE.
     
     Video generation: Now the Voice over audio & images are pieced together to generate video.
+
+
+##A sample output file is attached
