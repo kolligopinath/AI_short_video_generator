@@ -32,7 +32,7 @@ In the file AI_short_video_generator/AI_short_video_generator.py Give your API k
 
 You need a Python instance insalled on your system with the following packages
 
-    openai, requests, nltk, urllib.request, datetime, moviepy, flask(pip install these packages)
+    openai, requests, nltk, urllib.request, datetime, moviepy, flask, re(pip install these packages)
     
 Now run the app.py file from your teminal, this will generate a link with local server to launch the application. Launch the application using that link.
 
