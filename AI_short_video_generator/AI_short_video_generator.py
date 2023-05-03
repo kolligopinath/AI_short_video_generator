@@ -6,6 +6,7 @@ from datetime import datetime
 from moviepy.editor import *
 from moviepy.editor import VideoFileClip
 import time
+import re
 
 # Declaration of variables like API keys and others
 #replace the API keys
