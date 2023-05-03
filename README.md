@@ -44,6 +44,6 @@ Now you can see the UI as below screenshot.
 
 Type in the topic in detail on which you want to generate your video and then click on Generate.
 
-It will take its time to process and once the process is complete, it will automatcally opens a popup to download that video.
+It will take its time to do the magic and once the process is complete, it will automatcally opens a popup to download that video.
 
    ## That's it!!!
