@@ -21,16 +21,29 @@ How it has been built?
 ## A sample output file is attached - Mother and Childs Colorful Tale.mp4
 
 # Steps to follow to use this project:
+
 You need two account to make use of this project.
+
     1. ChatGPT 4
+    
     2. Eleven labs
+    
 In the file AI_short_video_generator/AI_short_video_generator.py Give your API keys for openai & elevenlabs
+
 You need a Python instance insalled on your system with the following packages
+
     openai, requests, nltk, urllib.request, datetime, moviepy, flask(pip install these packages)
+    
 Now run the app.py file from your teminal, this will generate a link with local server to launch the application. Launch the application using that link.
+
 http://127.0.0.1:5000
+
 Now you can see the UI as below screenshot.
+
 ![image](https://user-images.githubusercontent.com/21278131/235863659-b171323d-ae18-4455-a528-7deeed78b595.png)
+
 Type the topic on which you want to generate your video on and click on Generate.
+
 It will take its time to process and once the process is complete, it will automatcally opens a popup to download that video.
+
    ## That's it!!!
