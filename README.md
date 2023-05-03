@@ -42,7 +42,7 @@ Now you can see the UI as below screenshot.
 
 ![image](https://user-images.githubusercontent.com/21278131/235863659-b171323d-ae18-4455-a528-7deeed78b595.png)
 
-Type the topic on which you want to generate your video on and click on Generate.
+Type in the topic in detail on which you want to generate your video and then click on Generate.
 
 It will take its time to process and once the process is complete, it will automatcally opens a popup to download that video.
 
