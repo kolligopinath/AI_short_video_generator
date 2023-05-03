@@ -20,7 +20,7 @@ How it has been built?
 
 ## A sample output file is attached - Mother and Childs Colorful Tale.mp4
 
-# Steps to follow to use this project:
+# Steps to be followed for using this project:
 
 You need two account to make use of this project.
 
