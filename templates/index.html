@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI automated video generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #8EC5FC;
+            /* Change the background color */
+            background-image: url('https://s33009.pcdn.co/wp-content/uploads/2021/04/AdobeStock_159764616.jpeg.webp');
+            /* Add a background image */
+            background-size: cover;
+            /* Scale the image to cover the entire background */
+            background-repeat: no-repeat;
+            /* Prevent image repetition */
+            padding: 20px;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            /* Change the text color to white */
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            opacity: 1;
+            /* Add a background color */
+            padding: 20px;
+            /* Add padding for better appearance */
+            border-radius: 5px;
+            /* Add rounded corners to the background */
+            max-width: 600px;
+            /* Set max-width */
+            margin: 20px auto;
+            /* Center the heading */
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            resize: vertical;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-family: inherit;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AI automated video generator</h1>
+    <form action="/process" method="post">
+        <label for="input_text">Give a topic to AI for a video generation:</label>
+        <textarea id="input_text" name="input_text" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Generate">
+    </form>
+</body>
+
+</html>
