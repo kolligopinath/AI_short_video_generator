@@ -75,7 +75,7 @@ def generate_video(prompt):
             output.write(r.content)
 
         response_image = openai.Image.create(
-            prompt=sentence,
+            prompt="Convert the following sentense with painstaking detailed to be useful for image generation - " + sentence,
             n=1,
             size="1024x1024"
         )
