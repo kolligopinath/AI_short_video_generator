@@ -31,6 +31,12 @@ def chat_with_gpt(prompt, model="text-davinci-003"):
     )
     message = response.choices[0].text.strip()
     return message
+    
+    
+def remove_special_characters(input_string):
+    # Replace any non-alphanumeric characters with an empty string
+    cleaned_string = re.sub(r'[^a-zA-Z0-9\s]', '', input_string)
+    return cleaned_string
 
 
 def generate_video(prompt):
@@ -40,13 +46,16 @@ def generate_video(prompt):
     if not os.path.exists(audio_folder):
         # Create folder if it doesn't exist
         os.makedirs(audio_folder)
+        print("Folder created - Generated audios")
 
     if not os.path.exists(image_folder):
         # Create folder if it doesn't exist
         os.makedirs(image_folder)
+        print("Folder created - Generated images")
 
+    print("Input received from UI: " + prompt)
     response = chat_with_gpt(prompt)
-    print(response)
+    print("ChatGPT generated response: " + response)
 
     # Wait for 60 seconds
     # time.sleep(60)
@@ -56,6 +65,9 @@ def generate_video(prompt):
     timestamp_string = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 
     for index, sentence in enumerate(sentences):
+
+        print("Sentence " + str(index + 1) + ": " + sentence)
+
         # text to speech request with eleven labs
         url = f"https://api.elevenlabs.io/v1/text-to-speech/{ADVISOR_VOICE_ID}/stream"
         data = {
@@ -74,8 +86,13 @@ def generate_video(prompt):
         with open(audio_filename, "wb") as output:
             output.write(r.content)
 
+        Sentence_for_image = chat_with_gpt(
+            "Enhance the following sentense with painstaking details and adjectives - " + sentence)
+        print("Enhanced sentence " + str(index + 1) +
+              " for image generation: " + Sentence_for_image)
+
         response_image = openai.Image.create(
-            prompt="Convert the following sentense with painstaking detailed to be useful for image generation - " + sentence,
+            prompt=Sentence_for_image,
             n=1,
             size="1024x1024"
         )
@@ -110,8 +127,15 @@ def generate_video(prompt):
     output_video_file = "output_video" + timestamp_string + ".mp4"
     combined.write_videofile(output_video_file)
 
-    video_title = chat_with_gpt(
-        "Generate topic title in 4-5 words for description without punctuations and special character - " + prompt).replace('"', '') + ".mp4"
+    title_text = chat_with_gpt(
+        "Generate topic title in 4-5 words using the following sentense - " + prompt)
+
+    print("prompt value before title generation: " + prompt)
+    print("generated title from chatGPT: " + title_text)
+
+    video_title = remove_special_characters(title_text) + ".mp4"
+
+    print("prompt value before title generation: " + prompt)
 
     os.rename(output_video_file, video_title)
 
