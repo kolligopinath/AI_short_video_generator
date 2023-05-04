@@ -6,26 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI automated video generator</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #8EC5FC;
-            /* Change the background color */
-            background-image: url('https://s33009.pcdn.co/wp-content/uploads/2021/04/AdobeStock_159764616.jpeg.webp');
-            /* Add a background image */
-            background-size: cover;
-            /* Scale the image to cover the entire background */
-            background-repeat: no-repeat;
-            /* Prevent image repetition */
-            padding: 20px;
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Create a container for the content */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        /* Style the video */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
         }
 
         h1 {
             color: rgb(0, 0, 0);
             /* Change the text color to white */
             text-align: center;
-            background-color: rgb(255, 255, 255);
-            opacity: 1;
+            background-color: rgb(255, 255, 255, 0.5);
             /* Add a background color */
             padding: 20px;
             /* Add padding for better appearance */
@@ -38,7 +50,7 @@
         }
 
         form {
-            background-color: #fff;
+            background-color: rgb(255, 255, 255, 0.5);
             border-radius: 5px;
             padding: 20px;
             max-width: 600px;
@@ -62,7 +74,7 @@
         }
 
         input[type="submit"] {
-            background-color: #333;
+            background-color: rgb(15, 27, 92);
             color: #fff;
             font-size: 16px;
             padding: 10px 20px;
@@ -78,6 +90,10 @@
 </head>
 
 <body>
+    <video class="bg-video" autoplay muted loop>
+        <source src="{{ url_for('static', filename='New_Project.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <h1>AI automated video generator</h1>
     <form action="/process" method="post">
         <label for="input_text">Provide a topic for AI to generate a video:</label>
