@@ -92,11 +92,20 @@ def generate_video(prompt):
         print("Enhanced sentence " + str(index + 1) +
               " for image generation: " + Sentence_for_image)
 
-        response_image = openai.Image.create(
-            prompt=Sentence_for_image,
-            n=1,
-            size="1024x1024"
-        )
+        try:
+            response_image = openai.Image.create(
+                prompt=Sentence_for_image,
+                n=1,
+                size="1024x1024"
+            )
+        except openai.error.InvalidRequestError as e:
+            print(f"Request rejected by safety system: {e}")
+            response_image = openai.Image.create(
+                prompt=sentence,
+                n=1,
+                size="1024x1024"
+            )
+        
         image_url = response_image['data'][0]['url']
 
         image_filename = "Generated images/image" + \
