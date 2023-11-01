@@ -1,9 +1,6 @@
-flask
-os
-openai
-requests
-nltk
-urllib
-datetime
-moviepy
-time
+Flask==2.1.1
+openai==0.27.0
+requests==2.26.0
+nltk==3.6.3
+datetime==4.3
+moviepy==1.0.3
