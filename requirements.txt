@@ -1,0 +1,9 @@
+flask
+os
+openai
+requests
+nltk
+urllib
+datetime
+moviepy
+time
