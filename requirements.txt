@@ -4,4 +4,4 @@ requests==2.26.0
 nltk==3.6.3
 datetime==4.3
 moviepy==1.0.3
-uvicorn==0.23.1
+uvicorn==0.20.0
