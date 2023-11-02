@@ -5,4 +5,3 @@ nltk==3.6.3
 datetime==4.3
 moviepy==1.0.3
 uvicorn==0.23.1
-gunicorn==21.2.0
